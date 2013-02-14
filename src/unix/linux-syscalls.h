@@ -30,6 +30,10 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
+#if defined(__ANDROID__)
+#include "android.h"
+#endif
+
 #if defined(__alpha__)
 # define UV__O_CLOEXEC        0x200000
 #elif defined(__hppa__)
